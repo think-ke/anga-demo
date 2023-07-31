@@ -40,7 +40,7 @@ git clone https://github.com/CLozy/anga.git
 pip install -r requirements.txt
 ```
 
-### Executing program
+### Executing program locally 
 
 1. Train bot
 
