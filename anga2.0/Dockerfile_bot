@@ -1,0 +1,15 @@
+FROM python:3.8.14-slim-buster
+
+WORKDIR /anga2.0
+
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+
+COPY . .
+# RUN cd bot
+
+EXPOSE 5008
+
+RUN rasa train
+
+CMD ["rasa", "run", "--enable-api", "-p", "5008" "--cors", "*"]
